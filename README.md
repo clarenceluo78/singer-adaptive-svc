@@ -9,6 +9,7 @@ This repository is the implementation of project *Adversarial Waveform Generatio
   - [Singer-adaptive Module](#singer-adaptive-module)
 - [Baselines](#baselines)
   - [WORLD-based SVC](#world-based-svc)
+  - [USVC](#usvc)
 - [Implementation](#implementation)
 - [Experimental Results](#experimental-results)
 
@@ -151,6 +152,9 @@ At last, synthesis the converted audios using WORLD:
 cd model
 sh run_converse.sh
 ```
+
+### USVC
+[Work in progress ⏳]
 
 ## Implementation
 [Work in progress ⏳]
