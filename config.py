@@ -8,7 +8,7 @@ dataset2path = {
 }
 
 # Please configure the root path to save your data and model
-root_path = "/mntnfs/lee_data1/zhangxueyao/Public/Singing-Voice-Conversion"
+root_path = "/mntnfs/lee_data1/haoyan/SLP/Singing-Voice-Conversion"
 data_path = os.path.join(root_path, "preprocess")
 model_path = os.path.join(root_path, "model")
 

@@ -26,6 +26,7 @@ from Transformer import Transformer
 
 
 def config_save():
+    """Config save path"""
     if args.debug:
         args.save = os.path.join(model_path, "ckpts", "debug")
         args.epochs = 2
@@ -36,8 +37,8 @@ def config_save():
         os.system("rm -r {}".format(args.save))
     os.makedirs(args.save)
 
-
 def config_log():
+    """log save path"""
     logging_dir = os.path.join("logs", args.dataset)
     os.makedirs(logging_dir, exist_ok=True)
 
@@ -45,8 +46,12 @@ def config_log():
         logging_file = os.path.join(logging_dir, "debug.log")
     else:
         logging_file = os.path.join(logging_dir, "{}.log".format(experiment_name))
+
+    # logging.basicConfig(
+    #     filename=logging_file, encoding="utf-8", level=logging.DEBUG, filemode="w"
+    # )
     logging.basicConfig(
-        filename=logging_file, encoding="utf-8", level=logging.DEBUG, filemode="w"
+        filename=logging_file, level=logging.INFO, filemode="w"
     )
 
     tensorboard_dir = os.path.join(logging_dir, experiment_name)
@@ -62,7 +67,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # Experiment name
+    # set experiment name
     if args.debug:
         experiment_name = "debug"
     else:
