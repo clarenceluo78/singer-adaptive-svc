@@ -5,6 +5,7 @@ from argparse import ArgumentParser, ArgumentTypeError
 dataset2path = {
     "Opencpop": "/mntnfs/lee_data1/zhangxueyao/dataset/Opencpop",
     "M4Singer": "/mntnfs/lee_data1/zhangxueyao/dataset/M4Singer",
+    "ProSinger": "/mntnfs/lee_data1/haoyan/dataset/ProSinger/vocal",
 }
 
 # Please configure the root path to save your data and model
@@ -16,6 +17,7 @@ model_path = os.path.join(root_path, "model")
 dataset2wavpath = {
     "Opencpop": os.path.join(dataset2path["Opencpop"], "segments/wavs"),
     "M4Singer": dataset2path["M4Singer"],
+    "ProSinger": dataset2path["ProSinger"]  #TODO
 }
 
 # We select 5 utterances randomly for every singer
