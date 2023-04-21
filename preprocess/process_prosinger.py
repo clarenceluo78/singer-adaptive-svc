@@ -19,15 +19,16 @@ if __name__ == "__main__":
     train = []
     test = []
     for singer in os.listdir(prosinger_dir):
-        singer_dir = os.path.join(prosinger_dir, singer)
-        for song in os.listdir(singer_dir):
-            uid = song.split(".")[0]
-            res = {"Singer": singer, "Uid": song, "Uid": uid}
-            res["Path"] = "{}/{}".format(singer, song)
+        segments_dir = os.path.join(prosinger_dir, singer, "segments")
+        for wav in os.listdir(segments_dir):
+            song_id = wav.split("_")[0]
+            uid = wav.split(".")[0]
+            res = {"Singer": singer, "Song": song_id, "Uid": uid}
+            res["Path"] = "{}/segments/{}".format(singer, wav)
 
-            if int(uid) < 50:
+            if int(song_id) < 50:
                 train.append(res)
-            elif int(uid) < 60:
+            elif int(song_id) < 60:
                 test.append(res)
 
     # Save

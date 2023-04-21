@@ -17,7 +17,7 @@ model_path = os.path.join(root_path, "model")
 dataset2wavpath = {
     "Opencpop": os.path.join(dataset2path["Opencpop"], "segments/wavs"),
     "M4Singer": dataset2path["M4Singer"],
-    "ProSinger": dataset2path["ProSinger"]  #TODO
+    "ProSinger": dataset2path["ProSinger"],  #TODO
 }
 
 # We select 5 utterances randomly for every singer
