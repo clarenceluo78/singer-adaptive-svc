@@ -1,6 +1,6 @@
 # Singer-adaptive Singing Voice Conversion [Work in progress ⏳]
 
-This repository is the implementation of project *Adversarial Waveform Generation Based Singing Voice Conversion with A Singer-adaptive Module* and some baselines of Singing Voice Conversion (SVC) task.
+This repository is the implementation of project *Converting to Realistic Professional Singing Voices with Singer-Adaptive Representations* and some baselines of Singing Voice Conversion (SVC) task.
 
 ## Tabel of Contents
 - [Datasets](#datasets)
@@ -157,7 +157,31 @@ sh run_converse.sh
 [Work in progress ⏳]
 
 ## Implementation
+
+### Prerequisites
+
+1. Python 3.7+
+2. PyTorch 1.7+
+3. Librosa
+4. NumPy
+5. tqdm
+
+### Installation
+
+1. Clone the repository and install dependencies
+```bash
+git clone https://github.com/your_username/singer_adaptive_singing_voice_conversion.git
+cd singer_adaptive_singing_voice_conversion
+pip install -r requirements.txt
+
+2. Train
 [Work in progress ⏳]
 
 ## Experimental Results
 [Work in progress ⏳]
+
+| Method             | MOS ↓  | GPE ↓  | NCC ↓  |
+|--------------------|--------|--------|--------|
+| WORLD-based SVC    | -   | -  | - |
+| USVC               | -  | -  | -  |
+| Our method         | -   | -  | -   |
