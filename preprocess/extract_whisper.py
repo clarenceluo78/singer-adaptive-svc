@@ -41,6 +41,11 @@ def get_mapped_whisper_features(dataset, dataset_type, raw_whisper_features):
     for index, mcep in enumerate(tqdm(mceps)):
         sz = len(mcep)
 
+        # truncate if too long
+        if sz > WHISPER_SEQ:
+            mcep = mcep[:WHISPER_SEQ]
+            sz = WHISPER_SEQ
+
         # (1500, 1024)
         raw_feats = raw_whisper_features[index]
 
