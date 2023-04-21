@@ -73,6 +73,8 @@ def extract_mcep_features(
 
 
 if __name__ == "__main__":
-    extract_mcep_features("Opencpop", "test")
-    extract_mcep_features("Opencpop", "train")
-    extract_mcep_features("M4Singer", "test")
+    # extract_mcep_features("Opencpop", "test")
+    # extract_mcep_features("Opencpop", "train")
+    # extract_mcep_features("M4Singer", "test")
+    extract_mcep_features("ProSinger", "train")
+    extract_mcep_features("ProSinger", "test")

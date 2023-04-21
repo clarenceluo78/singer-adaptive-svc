@@ -69,7 +69,7 @@ def extract_whisper_features(dataset, dataset_type, batch_size=80):
     audio_paths = [
         os.path.join(wave_dir, "{}.wav".format(utt["Uid"])) for utt in datasets
     ]
-    if dataset == "M4Singer":
+    if dataset == "M4Singer" or dataset == "ProSinger":
         audio_paths = [os.path.join(wave_dir, utt["Path"]) for utt in datasets]
 
     start = 0
@@ -105,6 +105,8 @@ if __name__ == "__main__":
 
     model = model.eval()
 
-    extract_whisper_features("Opencpop", "test")
-    extract_whisper_features("Opencpop", "train")
-    extract_whisper_features("M4Singer", "test")
+    # extract_whisper_features("Opencpop", "test")
+    # extract_whisper_features("Opencpop", "train")
+    # extract_whisper_features("M4Singer", "test")
+    extract_whisper_features("ProSinger", "train")
+    extract_whisper_features("ProSinger", "test")

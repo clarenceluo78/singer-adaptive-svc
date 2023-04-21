@@ -35,7 +35,7 @@ def extract_world_features_of_dataset(
         uid = utt["Uid"]
         wave_file = os.path.join(wave_dir, "{}.wav".format(uid))
 
-        if dataset == "M4Singer":
+        if dataset == "M4Singer" or dataset == "ProSinger":
             wave_file = os.path.join(wave_dir, utt["Path"])
 
         f0, sp, _, _ = extract_world_features(wave_file, frame_period=frame_period)
