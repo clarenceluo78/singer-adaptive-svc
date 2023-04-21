@@ -173,6 +173,7 @@ sh run_converse.sh
 git clone https://github.com/your_username/singer_adaptive_singing_voice_conversion.git
 cd singer_adaptive_singing_voice_conversion
 pip install -r requirements.txt
+```
 
 2. Train
 [Work in progress ⏳]
