@@ -40,6 +40,9 @@ def save_pred_audios_in_training(
     dataset = args.dataset
     wave_dir = dataset2wavpath[dataset]
 
+    if dataset == "ProSinger":
+        wave_dir = os.path.join(wave_dir, args.singer, "segments") 
+
     output_dir = os.path.join(args.save, "{}".format(dataset_type))
     os.makedirs(output_dir, exist_ok=True)
 
