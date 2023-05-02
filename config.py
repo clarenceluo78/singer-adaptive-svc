@@ -55,7 +55,7 @@ parser.add_argument("--output_dim", type=int, default=MCEP_DIM)
 parser.add_argument(
     "--save", type=str, default="ckpts/debug", help="folder to save the final model"
 )
-parser.add_argument("--singer", type=str, default=None)  # TODO: only needed with ProSinger
+parser.add_argument("--singer", type=str, default="李健")  # TODO: only needed with ProSinger
 
 # ======================== Accoutic Models ========================
 parser.add_argument("--model", type=str, default="Transformer")
