@@ -5,7 +5,7 @@ from collections import defaultdict
 import sys
 
 sys.path.append("../")
-from config import data_path, dataset2path
+from config import data_path, dataset2path, dataset2wavpath
 
 def prosinger_statistics():
     pass
@@ -13,18 +13,18 @@ def prosinger_statistics():
 
 if __name__ == "__main__":
     # Load
-    prosinger_dir = dataset2path["ProSinger"]
+    prosinger_dir = dataset2wavpath["ProSinger"]
 
     # select first 50 wav files as train set, the next 10 as test set
     train = []
     test = []
     for singer in os.listdir(prosinger_dir):
-        segments_dir = os.path.join(prosinger_dir, singer, "segments")
+        segments_dir = os.path.join(prosinger_dir, singer)
         for wav in os.listdir(segments_dir):
             song_id = wav.split("_")[0]
             uid = wav.split(".")[0]
             res = {"Singer": singer, "Song": song_id, "Uid": uid}
-            res["Path"] = "{}/segments/{}".format(singer, wav)
+            res["Path"] = "{}/{}".format(singer, wav)
 
             if int(song_id) < 50:
                 train.append(res)
