@@ -12,8 +12,8 @@ parser.add_argument("--singer", type=str, default="李健")
 args = parser.parse_args()
 singer = args.singer
 PROSINGER_PATH = dataset2path["ProSinger"]
-SINGER_PATH = os.path.join(PROSINGER_PATH, singer)
-save_dir = os.path.join(PROSINGER_PATH, f"{singer}/segments")
+SINGER_PATH = os.path.join(PROSINGER_PATH, "vocal", singer)
+save_dir = os.path.join(PROSINGER_PATH, f"segments/{singer}")
 
 
 if __name__ == "__main__":
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for song in os.listdir(SINGER_PATH):
         song_id = song.split(".")[0]
 
-        audio, sr = librosa.load(f'{PROSINGER_PATH}/{singer}/{song}', sr=None, mono=False)  # Load an audio file with librosa.
+        audio, sr = librosa.load(f'{PROSINGER_PATH}/vocal/{singer}/{song}', sr=None, mono=False)  # Load an audio file with librosa.
         slicer = Slicer(
             sr=sr,
             threshold=-40,
