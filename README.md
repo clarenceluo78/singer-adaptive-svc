@@ -166,16 +166,31 @@ sh run_converse.sh
 4. NumPy
 5. tqdm
 
-### Installation
+### Setup
 
 1. Clone the repository and install dependencies
 ```bash
-git clone https://github.com/your_username/singer_adaptive_singing_voice_conversion.git
-cd singer_adaptive_singing_voice_conversion
+git clone https://github.com/SLPcourse/CSC3160-119010221-HaoyanLuo.git
+cd CSC3160-119010221-HaoyanLuo
 pip install -r requirements.txt
 ```
+conda environment is recommended.
 
-2. Train
+2. Process Data
+
+Here we only provide the processing steps for ProSinger. You can refer steps for other dataset in the original repo. Note the the vocal.wav files are renamed to song_id.wav (e.g. 1.wav).
+
+First, slice the vocal data into audio segments for training.
+```bash
+cd proprocess
+python slice_prosinger.py --singer "singer_name"
+``` 
+Then, process the specified singer data to training format
+```bash
+python process_prosinger.py
+```
+
+### Train
 [Work in progress ⏳]
 
 ## Experimental Results
