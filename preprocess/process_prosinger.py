@@ -37,8 +37,14 @@ if __name__ == "__main__":
         # elif int(song_id) < 60:
         #     test.append(res)
 
-        # adele
-        if int(song_id) < 34:
+        # # adele
+        # if int(song_id) < 34:
+        #     train.append(res)
+        # else:
+        #     test.append(res)
+
+        # YijieShi
+        if int(song_id) < 22:
             train.append(res)
         else:
             test.append(res)
