@@ -1,0 +1,3 @@
+[submodule "so-vits-svc-v4"]
+	path = so-vits-svc-v4
+	url = https://github.com/clarenceluo78/so-vits-svc
